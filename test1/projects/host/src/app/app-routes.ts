@@ -1,10 +1,8 @@
+import { loadRemoteModule } from '@angular-architects/module-federation-runtime';
 import { Routes } from '@angular/router';
 
-const URL = 'http://localhost:3000/remoteEntry.js';
+const URL = 'http://localhost:3000/';
 
-export const APP_ROUTES: Routes = [
-    {
-      path: 'module1',
-      loadChildren: () => import('module1/Module').then(m => m.AppModule)
-    },
-];
+const modules = ['module1']
+
+export const APP_ROUTES: Routes = [];

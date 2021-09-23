@@ -1,13 +1,24 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { modules } from './modules';
 
-import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { loadRemoteModule } from '@angular-architects/module-federation-runtime';
 
-if (environment.production) {
-  enableProdMode();
-}
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+
+loadRemoteModule({
+  exposedModule: './Module',
+  remoteName: 'module1',
+  remoteEntry: 'http://localhost:3000/module1.js'
+})
+  .then(m => {
+    modules.push(m.MainModule);
+  })
+  .then(() => {
+    import('./app/app.module').then(appModule => {
+      platformBrowserDynamic()
+        .bootstrapModule(appModule.AppModule)
+        .catch(err => console.error(err));
+    });
+  });
