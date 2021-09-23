@@ -12,7 +12,4 @@ import { AppRoutingModule } from './app-routing.module';
   exports: [MainComponent]
 })
 export class MainModule { 
-  constructor() {
-    alert('bla');
-  }
 }
