@@ -23,7 +23,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      
+      name: "module1",
+      filename: "remoteEntry.js",
+      exposes: {
+        './Module': './projects/module1/src/app/app.module.ts'
+      },
         // For remotes (please adjust)
         // name: "module1",
         // filename: "remoteEntry.js",
