@@ -5756,6 +5756,13 @@ ng-click-outside@^9.0.0:
   resolved "https://registry.yarnpkg.com/ng-click-outside/-/ng-click-outside-9.0.0.tgz#4ed1f3663c1e5cc485d46d89377daf38ad58e2ae"
   integrity sha512-WaM1Ph42xAf3WA92fitAGvVvi8NUMsc8D/saVh1673cOtcKKVYbX8lIfs2EzvS0OSULthA9CbZc3VpFM8UGBBA==
 
+ng-marquee@^9.5.0:
+  version "9.5.0"
+  resolved "https://registry.yarnpkg.com/ng-marquee/-/ng-marquee-9.5.0.tgz#43fb801417145b2d764984c0ce1e8ac32dc010a7"
+  integrity sha512-U+Nh+J4XZT1R6hkl3gNAAD1RVDNnrKpjk/Nm29QitcC7BHWk2I3gqGDewC3Y+hhkALK6IDh8Umybo00K9HiK7w==
+  dependencies:
+    tslib "^1.9.0"
+
 ngx-build-plus@^12.2.0:
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/ngx-build-plus/-/ngx-build-plus-12.2.0.tgz#5f9870f210e4bd0ddb471f98294b210adf2ab3b2"

@@ -1,16 +1,8 @@
-<sw-navigation-drawer [items]="navitems"
-                      [opened]="navOpened"
-                      [width]="300"
-                      [sideNavMode]="sideNavMode"
-                      (toggled)="navToggled($event)"
-                      [imgSrc]="imgSrc">
+<sw-navigation-drawer [items]="navitems" [opened]="navOpened" [width]="300" [sideNavMode]="sideNavMode"
+  (toggled)="navToggled($event)" [imgSrc]="imgSrc">
   <div class="navigation-drawer-content">
-    <sw-appbar (menuButtonClicked)="toggleNavDrawer()"
-               [profileInitials]="'XD'"
-               [title]="'Cool App'"
-               [showProfile]="true"
-               [showSearchButton]="true"
-               [showMenuButton]="true">
+    <sw-appbar (menuButtonClicked)="toggleNavDrawer()" [profileInitials]="'XD'" [title]="'Module Federation'"
+      [showProfile]="true" [showSearchButton]="true" [showMenuButton]="true">
     </sw-appbar>
   </div>
   <div>
@@ -18,10 +10,8 @@
   </div>
 </sw-navigation-drawer>
 
-<ng-template let-item="item"
-             #navItemInfoTemplate>
-  <div class="info-template"
-       *ngIf="item.infoTemplateText$">
+<ng-template let-item="item" #navItemInfoTemplate>
+  <div class="info-template" *ngIf="item.infoTemplateText$">
     {{ item.infoTemplateText$ | async }}
   </div>
 </ng-template>

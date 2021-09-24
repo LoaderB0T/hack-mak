@@ -1,0 +1,26 @@
+.title {
+  font-family: "Comic Sans MS";
+}
+
+.title-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  font-family: "Comic Sans MS";
+  font-size: 72pt;
+  color: white;
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    green,
+    blue,
+    yellow,
+    orange,
+    red
+  );
+}

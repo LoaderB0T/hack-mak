@@ -13,9 +13,11 @@ import {
   SWListModule,
 } from '@sw/angular-controls';
 import { loadedModules } from '../module.model';
+import { HomeComponent } from './home/home.component';
+import { NgMarqueeModule } from 'ng-marquee';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,7 +28,8 @@ import { loadedModules } from '../module.model';
     SWNavigationDrawerModule,
     BrowserAnimationsModule,
     SWListModule,
-    loadedModules
+    loadedModules,
+    NgMarqueeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
