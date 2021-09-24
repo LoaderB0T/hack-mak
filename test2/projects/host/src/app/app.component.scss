@@ -1,5 +1,58 @@
-.toolbar-icon {
-  width: 100%;
+.main-content {
+  height: 100vh;
+}
+
+.child-action {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+sw-navigation-drawer {
+  ::ng-deep
+    .sidenav
+    .mat-drawer-container.mat-sidenav-container
+    .mat-drawer.mat-sidenav
+    .mat-drawer-inner-container
+    .sidenavTitle
+    .logo-header {
+    height: 103px;
+    .header-container .image-icon-container .logo {
+      width: 148px;
+      height: 48px;
+    }
+  }
+}
+
+.navigation-drawer-content {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  height: 100%;
+
+  .floating-actions {
+    margin-top: 4px;
+    background-color: var(--sw-medium-blue-500);
+
+    .header-action-icon {
+      ::ng-deep .mat-icon {
+        color: var(--sw-white);
+      }
+    }
+  }
+
+  sw-sidenav {
+    height: calc(100% - 64px);
+
+    ::ng-deep .mat-drawer-inner-container {
+      overflow: auto;
+    }
+  }
+
+  sw-processes-router-outlet {
+    flex: 0;
+  }
+
+  sw-progress-indicator {
+    height: auto;
+  }
 }

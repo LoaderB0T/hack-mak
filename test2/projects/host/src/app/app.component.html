@@ -1,18 +1,27 @@
-<sw-navigation-drawer [opened]="navOpened" [imgSrc]="imgSrc">
-  <sw-appbar [title]="'Cool Host'" [showSearchButton]=" true" [showMenuButton]="true" [showProfile]="true"
-    [profileInitials]="'XD'" (menuButtonClicked)="toggleNavDrawer()">
-  </sw-appbar>
-
-  <sw-sidenav [mode]="sideNavMode" [width]="100" [widthUnit]="'vw'" [position]="'end'" [opened]="navOpened">
-    <div sidenavContent>
-      <img src="https://serviceware-se.com/fileadmin/medialis/Resources/img/logos/serviceware-logo-mobile.svg"
-        class="mt-2" />
-    </div>
-  </sw-sidenav>
-
-  <div sidenavContent class="flex no-over">
+<sw-navigation-drawer [items]="navitems"
+                      [opened]="navOpened"
+                      [width]="300"
+                      [sideNavMode]="sideNavMode"
+                      (toggled)="navToggled($event)"
+                      [imgSrc]="imgSrc">
+  <div class="navigation-drawer-content">
+    <sw-appbar (menuButtonClicked)="toggleNavDrawer()"
+               [profileInitials]="'XD'"
+               [title]="'Cool App'"
+               [showProfile]="true"
+               [showSearchButton]="true"
+               [showMenuButton]="true">
+    </sw-appbar>
+  </div>
+  <div>
     <router-outlet></router-outlet>
   </div>
-
-  <button (click)="tmp()">click</button>
 </sw-navigation-drawer>
+
+<ng-template let-item="item"
+             #navItemInfoTemplate>
+  <div class="info-template"
+       *ngIf="item.infoTemplateText$">
+    {{ item.infoTemplateText$ | async }}
+  </div>
+</ng-template>

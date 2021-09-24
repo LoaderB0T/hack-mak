@@ -15,6 +15,6 @@ import { SharedService } from '@shared';
 })
 export class EntryModule {
   constructor(sharedService: SharedService) {
-    sharedService.addMenuItem({route: 'module1', title: 'Module 1'});
+    sharedService.addMenuItem({route: 'module1', title: 'Module 1', icon: 'home'});
   }
 }
