@@ -1,4 +1,16 @@
-<sw-toolbar>FUCKIN TOOLBAR
-  <div class="toolbar-icon"></div>
-  <sw-icon name="home"></sw-icon>
-</sw-toolbar>
+<sw-navigation-drawer [opened]="navOpened">
+  <sw-appbar [title]="'Cool Host'" [showSearchButton]="true" [showMenuButton]="true" [showProfile]="true"
+    [profileInitials]="'XD'" (menuButtonClicked)="toggleNavDrawer()">
+    <sw-menu>
+      <sw-menu-item [description]="'Profile dropdown item'" [secondaryDescription]="'I am provided via template :)'"
+        [icon]="'format_paint'">
+      </sw-menu-item>
+    </sw-menu>
+  </sw-appbar>
+
+  <sw-sidenav [mode]="sideNavMode" [width]="100" [widthUnit]="'vw'" [position]="'end'" [opened]="true">
+    <div sidenavContent>
+      Sidenav content
+    </div>
+  </sw-sidenav>
+</sw-navigation-drawer>
