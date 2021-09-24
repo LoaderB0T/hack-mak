@@ -1,6 +1,6 @@
 [
     {
-        "url": "http://localhost:3000/",
+        "url": "http://localhost:4200/assets/module1/",
         "name": "module1",
         "ngModuleName": "EntryModule"
     }

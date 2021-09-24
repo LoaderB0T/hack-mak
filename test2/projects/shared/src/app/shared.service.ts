@@ -5,7 +5,13 @@ import { MenuItem } from './menu-items';
   providedIn: 'root',
 })
 export class SharedService {
-  private readonly _menuItems: MenuItem[] = [];
+  private readonly _menuItems: MenuItem[] = [
+      {
+          icon: 'home',
+          title: 'Home',
+          route: '/'
+      }
+  ];
   constructor() {}
 
   public addMenuItem(menuItem: MenuItem) {
