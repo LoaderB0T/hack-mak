@@ -11,6 +11,7 @@ import {
   SWNavigationDrawerModule,
   SWSidenavModule,
 } from '@sw/angular-controls';
+import { loadedModules } from '../module.model';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import {
     SWSidenavModule,
     SWNavigationDrawerModule,
     BrowserAnimationsModule,
+    loadedModules
   ],
   providers: [],
   bootstrap: [AppComponent],

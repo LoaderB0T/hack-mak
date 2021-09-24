@@ -9,5 +9,9 @@
     </div>
   </sw-sidenav>
 
-  <router-outlet></router-outlet>
+  <div sidenavContent class="flex no-over">
+    <router-outlet></router-outlet>
+  </div>
+
+  <button (click)="tmp()">click</button>
 </sw-navigation-drawer>

@@ -3,7 +3,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { environment } from './environments/environment';
 import { loadRemoteModule } from '@angular-architects/module-federation-runtime';
-import { ModuleDefinition } from './module.model';
+import { loadedModules, ModuleDefinition } from './module.model';
 
 fetch('/assets/modules.json')
   .then((response) => response.json())
@@ -11,12 +11,12 @@ fetch('/assets/modules.json')
   .then((modules) => {
     return Promise.all(
       modules.map((module) => {
-        loadRemoteModule({
+        return loadRemoteModule({
           exposedModule: './Module',
           remoteName: module.name,
           remoteEntry: module.url + module.name + '.js',
         }).then((m) => {
-          modules.push(m[module.ngModuleName]);
+          loadedModules.push(m[module.ngModuleName]);
         });
       })
     );

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SWSidenavMode } from '@sw/angular-controls';
+import {SharedService} from '@shared'
 
 @Component({
   selector: 'app-root',
@@ -12,5 +13,13 @@ export class AppComponent {
 
   public toggleNavDrawer(open?: boolean) {
     this.navOpened = open ?? !this.navOpened;
+  }
+
+  constructor(private readonly sharedService: SharedService) {
+    
+  }
+
+  tmp() {
+    console.log(this.sharedService.getMenuItems());
   }
 }
