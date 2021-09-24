@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import "node_modules/@sw/angular-controls/assets/styles/styles.scss";
+@import "node_modules/@sw/angular-controls/assets/styles/fonts.scss";
+
+:root {
+  @include main-variables;
+}
+
+body {
+  margin: 0;
+}

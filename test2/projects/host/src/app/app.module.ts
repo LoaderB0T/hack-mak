@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SWToolbarModule } from '@sw/angular-controls';
+import { SWToolbarModule, SWIconModule } from '@sw/angular-controls';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SWToolbarModule],
+  imports: [BrowserModule, AppRoutingModule, SWToolbarModule, SWIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })
