@@ -10,6 +10,7 @@ import {
   SWMenuModule,
   SWNavigationDrawerModule,
   SWSidenavModule,
+  SWListModule,
 } from '@sw/angular-controls';
 import { loadedModules } from '../module.model';
 
@@ -24,6 +25,7 @@ import { loadedModules } from '../module.model';
     SWSidenavModule,
     SWNavigationDrawerModule,
     BrowserAnimationsModule,
+    SWListModule,
     loadedModules
   ],
   providers: [],

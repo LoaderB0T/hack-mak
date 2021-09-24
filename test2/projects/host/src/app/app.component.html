@@ -1,11 +1,12 @@
-<sw-navigation-drawer [opened]="navOpened">
-  <sw-appbar [title]="'Cool Host'" [showSearchButton]="true" [showMenuButton]="true" [showProfile]="true"
+<sw-navigation-drawer [opened]="navOpened" [imgSrc]="imgSrc">
+  <sw-appbar [title]="'Cool Host'" [showSearchButton]=" true" [showMenuButton]="true" [showProfile]="true"
     [profileInitials]="'XD'" (menuButtonClicked)="toggleNavDrawer()">
   </sw-appbar>
 
-  <sw-sidenav [mode]="sideNavMode" [width]="100" [widthUnit]="'vw'" [position]="'end'" [opened]="true">
+  <sw-sidenav [mode]="sideNavMode" [width]="100" [widthUnit]="'vw'" [position]="'end'" [opened]="navOpened">
     <div sidenavContent>
-      Sidenav content
+      <img src="https://serviceware-se.com/fileadmin/medialis/Resources/img/logos/serviceware-logo-mobile.svg"
+        class="mt-2" />
     </div>
   </sw-sidenav>
 

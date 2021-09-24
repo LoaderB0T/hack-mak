@@ -10,6 +10,7 @@ import {SharedService} from '@shared'
 export class AppComponent {
   public sideNavMode = SWSidenavMode.OVER;
   public navOpened: boolean = false;
+  public imgSrc = '../assets/serviceware-logo.svg';
 
   public toggleNavDrawer(open?: boolean) {
     this.navOpened = open ?? !this.navOpened;
