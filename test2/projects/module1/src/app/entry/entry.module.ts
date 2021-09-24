@@ -5,7 +5,12 @@ import { RouterModule } from '@angular/router';
 import { SharedService } from '@shared';
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild([])],
+  imports: [CommonModule, RouterModule.forChild([
+    {
+      path: 'module1',
+      component: EntryComponent,
+    }
+  ])],
   declarations: [EntryComponent],
 })
 export class EntryModule {
